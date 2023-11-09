@@ -1,9 +1,10 @@
 ﻿// Greetings
-Console.Write("Write your name: "); 
 
-String name = Console.ReadLine();
+// Console.Write("Write your name: "); 
 
-Console.WriteLine($"Nice to meet you, {name.ToUpper()}.\nSo you have to solve 3 problems, ok?");
+// String name = Console.ReadLine();
+
+// Console.WriteLine($"Nice to meet you, {name.ToUpper()}.\nSo you have to solve 3 problems, ok?");
 
 // Console.WriteLine("-------------------------");
 // Console.WriteLine("1. Calculation of the surface of a circle and the length of a circle");
@@ -55,53 +56,53 @@ Console.WriteLine($"Nice to meet you, {name.ToUpper()}.\nSo you have to solve 3 
 // Console.WriteLine($"{name}, Your age is equal{age_in_days}");
 
 
-Console.Write("Insert number: ");
-int num_1 = Convert.ToInt32(Console.ReadLine());
-string str_1 = "telefOn";
+// Console.Write("Insert number: ");
+// int num_1 = Convert.ToInt32(Console.ReadLine());
+// string str_1 = "telefOn";
 
-// task-1
+// // task-1
 
-Console.WriteLine("-------------------------");
-Console.WriteLine("1. ToLower Or ToUpper");
-Console.WriteLine("-------------------------");
+// Console.WriteLine("-------------------------");
+// Console.WriteLine("1. ToLower Or ToUpper");
+// Console.WriteLine("-------------------------");
 
-if (str_1.Length > num_1) {
-    Console.WriteLine(str_1.ToLower());
-}
-else {
-    Console.WriteLine(str_1.ToUpper());
-}
+// if (str_1.Length > num_1) {
+//     Console.WriteLine(str_1.ToLower());
+// }
+// else {
+//     Console.WriteLine(str_1.ToUpper());
+// }
 
-// task-2
+// // task-2
 
-Console.WriteLine("-------------------------");
-Console.WriteLine("2. Comparation");
-Console.WriteLine("-------------------------");
+// Console.WriteLine("-------------------------");
+// Console.WriteLine("2. Comparation");
+// Console.WriteLine("-------------------------");
 
-int x = 15;
-int y = 10;
+// int x = 15;
+// int y = 10;
 
-if (x > y) {
-    Console.WriteLine("X is greater than Y");
-}
-else if (x < y) {
-    Console.WriteLine("Y is greater than X");
-}
-else if (x == y) {
-    Console.WriteLine("X is equal to Y");
-}
-else {
-    Console.WriteLine("X and Y are not comparable");
-}
+// if (x > y) {
+//     Console.WriteLine("X is greater than Y");
+// }
+// else if (x < y) {
+//     Console.WriteLine("Y is greater than X");
+// }
+// else if (x == y) {
+//     Console.WriteLine("X is equal to Y");
+// }
+// else {
+//     Console.WriteLine("X and Y are not comparable");
+// }
 
-// task-3
+// // task-3
 
-Console.WriteLine("-------------------------");
-Console.WriteLine("3. Weekday and Weekend");
-Console.WriteLine("-------------------------");
+// Console.WriteLine("-------------------------");
+// Console.WriteLine("3. Weekday and Weekend");
+// Console.WriteLine("-------------------------");
 
-Console.Write("Insert string value: ");
-string operation = Console.ReadLine();
+// Console.Write("Insert string value: ");
+// string operation = Console.ReadLine();
 
 // switch (operation.ToLower()) {
 //     case "dushanba":
@@ -136,15 +137,80 @@ string operation = Console.ReadLine();
 //         break;
 // }
 
-string result_day = operation.ToLower() switch {
-    "dushanba" => "Monday",
-    "seshanba" => "Tuesday",
-    "chorshanba" => "Wednesday",
-    "payshanba" => "Thusday",
-    "juma" => "Friday",
-    "shanba" => "Saturday",
-    "yakshanba" => "Sunday",
-    _ => "Operation Not Found"
-};
+// string result_day = operation.ToLower() switch {
+//     "dushanba" => "Monday",
+//     "seshanba" => "Tuesday",
+//     "chorshanba" => "Wednesday",
+//     "payshanba" => "Thusday",
+//     "juma" => "Friday",
+//     "shanba" => "Saturday",
+//     "yakshanba" => "Sunday",
+//     _ => "Operation Not Found"
+// };
 
-Console.WriteLine(result_day);
+// Console.WriteLine(result_day);
+
+// task-1
+
+int num = 10;
+int i = 0;
+int sum = 0;
+
+while (i <= num) 
+{
+    
+    if (i % 2 != 0) 
+    {
+        sum +=i;
+    }
+    i++;
+}
+
+Console.WriteLine(sum);
+
+// task-2
+
+int[] num_list = {6, 2, 3, 4, 5, 3};
+
+int smallest = num_list[0];
+int largest = num_list[0];
+
+for (int j = 1; j < num_list.Length; j++)
+{
+    if (num_list[j] < smallest)
+    {
+        smallest = num_list[j];
+    }
+
+    if (num_list[j] > largest)
+    {
+        largest = num_list[j];
+    }
+}
+
+int res_multi = smallest * largest;
+Console.WriteLine(res_multi);
+
+// task-3
+
+Console.Write("Enter random number: ");
+int random_num =  Convert.ToInt32(Console.ReadLine());
+
+int initial_num = 1;
+int sum_factorial = 1;
+
+while(initial_num != random_num+1){
+    
+    sum_factorial *=initial_num;
+    initial_num +=1;
+    // sum_factorial = sum_factorial * initial_num;
+    // initial_num = initial_num + 1;
+}
+
+Console.WriteLine(sum_factorial);
+
+
+
+
+
+
