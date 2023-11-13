@@ -1,4 +1,6 @@
-﻿// Greetings
+﻿using KESCHA.Classes;
+
+// Greetings
 
 // Console.Write("Write your name: "); 
 
@@ -152,64 +154,82 @@
 
 // task-1
 
-int num = 10;
-int i = 0;
-int sum = 0;
+// int num = 10;
+// int i = 0;
+// int sum = 0;
 
-while (i <= num) 
-{
+// while (i <= num) 
+// {
     
-    if (i % 2 != 0) 
-    {
-        sum +=i;
-    }
-    i++;
-}
+//     if (i % 2 != 0) 
+//     {
+//         sum +=i;
+//     }
+//     i++;
+// }
 
-Console.WriteLine(sum);
+// Console.WriteLine(sum);
 
 // task-2
 
-int[] num_list = {6, 2, 3, 4, 5, 3};
+// int[] num_list = {6, 2, 3, 4, 5, 3};
 
-int smallest = num_list[0];
-int largest = num_list[0];
+// int smallest = num_list[0];
+// int largest = num_list[0];
 
-for (int j = 1; j < num_list.Length; j++)
-{
-    if (num_list[j] < smallest)
-    {
-        smallest = num_list[j];
-    }
+// for (int j = 1; j < num_list.Length; j++)
+// {
+//     if (num_list[j] < smallest)
+//     {
+//         smallest = num_list[j];
+//     }
 
-    if (num_list[j] > largest)
-    {
-        largest = num_list[j];
-    }
-}
+//     if (num_list[j] > largest)
+//     {
+//         largest = num_list[j];
+//     }
+// }
 
-int res_multi = smallest * largest;
-Console.WriteLine(res_multi);
+// int res_multi = smallest * largest;
+// Console.WriteLine(res_multi);
 
-// task-3
+// // task-3
 
-Console.Write("Enter random number: ");
-int random_num =  Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter random number: ");
+// int random_num =  Convert.ToInt32(Console.ReadLine());
 
-int initial_num = 1;
-int sum_factorial = 1;
+// int initial_num = 1;
+// int sum_factorial = 1;
 
-while(initial_num != random_num+1){
+// while(initial_num != random_num+1){
     
-    sum_factorial *=initial_num;
-    initial_num +=1;
-    // sum_factorial = sum_factorial * initial_num;
-    // initial_num = initial_num + 1;
-}
+//     sum_factorial *=initial_num;
+//     initial_num +=1;
+//     // sum_factorial = sum_factorial * initial_num;
+//     // initial_num = initial_num + 1;
+// }
 
-Console.WriteLine(sum_factorial);
+// Console.WriteLine(sum_factorial);
+
+// OOP bo’limi uchun 1-amaliy vazifa
+
+Console.WriteLine("--Welcome to our Book Shop--\nWe have the following books:");
+
+Book AliBaba = new Book(book_name: "Alibaba", book_author: "Zarif Jamal", book_price: 12);
+Book HarryPotter = new Book(book_name: "Harry Potter", book_author: "Joanne Rowling", book_price: 18);
+Book AtomicHabits = new Book(book_name: "Aromic Habits", book_author: "James Clear", book_price: 30);
 
 
+Console.WriteLine("---------------------");
+AliBaba.PrintBookDetails();
+Console.WriteLine("---------------------");
+HarryPotter.PrintBookDetails();
+Console.WriteLine("---------------------");
+AtomicHabits.PrintBookDetails();
+Console.WriteLine("---------------------");
+
+
+Console.Write("--Thank you for choosing our Book Shop--");
 
 
 
